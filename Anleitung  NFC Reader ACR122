@@ -1,0 +1,13 @@
+NFC Reader ACR122 installieren:
+
+benötigtes Modul = pyscard
+
+Install Library on Raspberry pi
+
+
+sudo apt-get install pcscd git python-setuptools swig gcc libpcsclite-dev python-dev
+
+git clone https://github.com/LudovicRousseau/pyscard.git
+cd pyscard
+sudo python setup.py build_ext install
+sudo reboot
