@@ -1,0 +1,25 @@
+Befehle der Reihe nach ausführen:
+
+cd Desktop/
+
+mkdir lcd_display
+
+cd lcd_display
+
+git clone https://github.com/CaptainStouf/raspberry_lcd4x20_I2C
+
+cd raspberry_lcd4x20_I2C/
+
+cd lib
+
+lcddriver.py Bearbeiten und dort prüfen ob dort die:
+# LCD Address
+ADDRESS = 0x27
+
+Adresse korrekt ist. Um zu sehen unter welcher Adresse das
+Display am Raspberry angebunden ist könnt ihr folgenden Befehl benutzen.
+i2cdetect -y 1
+
+Wenn die Adressen übereinstimmen, Datei speichern.
+Dann die lcddriver.py zusammen mit der i2c_lib.py in den gleichen
+Ordner kopieren wie das eigentliche Programm liegt in dem das Display eingebunden werden soll.
