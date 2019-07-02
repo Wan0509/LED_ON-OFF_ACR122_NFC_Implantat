@@ -32,7 +32,7 @@ def s():
             uid = toHexString(response, format=0)
             print (uid)
 
-            if uid == "04 4A CE 12 90 00":
+            if uid == "XX XX XX XX XX XX": #hier die eigene UID eingeben
                 # how to count the Pins
                 GPIO.setmode(GPIO.BOARD)
                 # get Pin 12  as output
